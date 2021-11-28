@@ -606,6 +606,9 @@ img {
     background-color: var(--secondary-background-color);
     color: var(--secondary-black-color);
     cursor: pointer;
+    transition: color var(--main-effects-option), 
+    background-color var(--main-effects-option),
+    box-shadow var(--main-effects-option);
 }
 .filter-btn.current {
     background-color: var(--main-blue-color);
@@ -626,12 +629,14 @@ img {
 .projects-item {
     margin-right: 30px;
     margin-bottom: 30px;
+    width: 370px;
+    height: auto;
 }
 .project-link {
     display: block;
-    width: 100%;
+    max-width: 100%;
     height: 100%;
-
+    transition: box-shadow var(--main-effects-option);
 }
 .projects-item:nth-child(3n) {
     margin-right: 0px;
@@ -657,7 +662,6 @@ img {
     line-height: 2.00;
     letter-spacing: 0.06em;
     color: var(--secondary-black-color);
-    
 }
 .projects-text {
     font-family: Roboto, sans-serif;
@@ -670,6 +674,32 @@ img {
     border-right: solid 1px var(--portfolio-item-border-color);
     border-left: solid 1px var(--portfolio-item-border-color);
 }
+.overlay-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.project-about {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    background-color: rgba(33, 150, 243, 0.9);
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: transform var(--main-effects-option), background-color var(--main-effects-option);
+    padding: 63px 24px;
+}
+.project-link:hover .project-about,
+.project-link:focus .project-about,
+.project-link:active .project-about {
+    transform: translateY(0);
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
