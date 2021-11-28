@@ -712,3 +712,44 @@ img {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+.backdrop {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: opacity var(--main-effects-option), visibility var(--main-effects-option);
+}
+.backdrop.is-hidden .modal {
+    transform: scale(0.5) rotate(180deg);
+}
+.modal {
+    width: 528px;
+    min-height: 581px;
+    background-color: var(--main-white-color);
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(1) translate(-50%, -50%);
+    transition: transform var(--main-effects-option);
+}
+.modal-close-btn {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
