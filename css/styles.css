@@ -690,9 +690,10 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY(100%);
+    transform: translateY(101%);
     transition: transform var(--main-effects-option), background-color var(--main-effects-option);
     padding: 63px 24px;
+    height: 100%;
 }
 .project-link:hover .project-about,
 .project-link:focus .project-about,
