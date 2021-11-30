@@ -671,8 +671,6 @@ img {
     line-height: 1.87;
     letter-spacing: 0.03em;
     color: var(--main-text-color);
-    border-right: solid 1px var(--portfolio-item-border-color);
-    border-left: solid 1px var(--portfolio-item-border-color);
 }
 .overlay-wrapper {
     position: relative;
